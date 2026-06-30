@@ -122,10 +122,11 @@ function trocarSlide() {
 setInterval(trocarSlide, 4000);
 
 
-function comecar(){
+function comecar() {
 
-    const musica =
-        document.getElementById("musica");
+    const musica = document.getElementById("musica");
+
+    musica.currentTime = 22;
 
     musica.play();
 
