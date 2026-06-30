@@ -126,12 +126,14 @@ function comecar() {
 
     const musica = document.getElementById("musica");
 
-    musica.currentTime = 22;
+    musica.addEventListener("loadedmetadata", () => {
+        musica.currentTime = 22;
+        musica.play();
+    }, { once: true });
 
-    musica.play();
+    musica.load();
 
     document
         .getElementById("telaInicial")
         .classList.add("ocultar");
-
 }
